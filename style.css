@@ -1,0 +1,221 @@
+/* =========================
+   Karabo's Clothing Store
+   Theme: Navy + Teal + Warm Coral
+   ========================= */
+
+:root {
+  --bg: #fbf7f1;           /* warm off-white */
+  --card: #ffffff;
+  --text: #1f2430;        /* near-black */
+  --muted: #5b6476;
+
+  --primary: #0b1f3a;    /* deep navy */
+  --primary-2: #123a66;
+
+  --accent: #0fa3a6;     /* rich teal */
+  --accent-2: #09a89b;
+  --cta: #f25c4d;        /* warm coral */
+  --cta-2: #e24f40;
+
+  --border: rgba(11, 31, 58, 0.12);
+  --shadow: 0 10px 24px rgba(11, 31, 58, 0.10);
+
+  --radius: 14px;
+  --radius-sm: 10px;
+
+  --maxw: 980px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(15, 163, 166, 0.14), transparent 60%),
+              radial-gradient(900px 500px at 90% 10%, rgba(242, 92, 77, 0.12), transparent 55%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header {
+  max-width: var(--maxw);
+  margin: 28px auto 0;
+  padding: 18px 18px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--primary);
+}
+
+header p {
+  margin: 8px auto 0;
+  max-width: 60ch;
+  text-align: center;
+  color: var(--muted);
+}
+
+nav {
+  max-width: var(--maxw);
+  margin: 10px auto 18px;
+  padding: 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #061121;
+  border-color: rgba(15, 163, 166, 0.45);
+  background: rgba(15, 163, 166, 0.10);
+  transform: translateY(-1px);
+}
+
+hr {
+  max-width: var(--maxw);
+  margin: 22px auto;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(11, 31, 58, 0.18), transparent);
+}
+
+section {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 14px 18px 0;
+}
+
+section > h2 {
+  margin: 10px 0 10px;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+section p,
+section li {
+  color: var(--text);
+}
+
+section p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+ul, ol {
+  margin: 10px 0 16px 18px;
+  padding: 0;
+  color: var(--muted);
+}
+
+li {
+  margin: 8px 0;
+}
+
+footer {
+  max-width: var(--maxw);
+  margin: 26px auto 30px;
+  padding: 0 18px;
+}
+
+footer p {
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Forms (enquiry.html) */
+form {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  margin: 10px 0 18px;
+}
+
+form p {
+  margin: 12px 0;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(11, 31, 58, 0.18);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgba(15, 163, 166, 0.7);
+  box-shadow: 0 0 0 4px rgba(15, 163, 166, 0.18);
+}
+
+textarea { resize: vertical; min-height: 120px; }
+
+input[type="submit"],
+input[type="reset"] {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 12px 18px;
+  margin-right: 10px;
+  margin-top: 8px;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="submit"] {
+  background: linear-gradient(180deg, var(--cta), var(--cta-2));
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(242, 92, 77, 0.25);
+}
+
+input[type="reset"] {
+  background: rgba(11, 31, 58, 0.08);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  transform: translateY(-1px);
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+  transform: translateY(0px);
+}
+
+/* Keep existing h1 rule support but make it nicer site-wide */
+h1 {
+  font-size: inherit;
+}
+
