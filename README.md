@@ -76,4 +76,8 @@ Karabo-s-Clothing-Store/
 - v1.2 – Improved layout and navigation structure
 - v1.3 – Final review and bug fixes
 
+## Reference List (Harvard style)
+W3Schools (n.d.) *W3Schools Online Web Tutorials*. Available at: https://www.w3schools.com/ (Accessed: 29 May 2026).
+
+
 
